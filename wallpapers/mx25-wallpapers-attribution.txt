@@ -261,5 +261,18 @@ Artist/Creator: 5th.attempt (forum member)
 Licence: Creative Commons Attribution-NonCommercial-ShareAlike (BY-NC-SA)
 URL/Source: https://ibb.co/tMz3Rkqn
 
+38.
+
+Image name:  Frozen MX
+Artist/Creator:  Freja
+License:  Creative Commons Attribution-ShareAlike 4.0 International License
+URL/Source:  https://www.flickr.com/photos/154078448@N02/54518878062/in/album-72177720325817539/
+
+39.
+
+Image name:  logo-lines
+Artist/Creator:  Melber
+License:  Creative Commons Attribution-ShareAlike 3.0 License
+URL/Source:  https://www.flickr.com/photos/154078448@N02/54518878062/in/album-72177720325817539/
 
 

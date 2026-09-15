@@ -1,0 +1,42 @@
+# PKGBUILD for building on the Open Build Service.
+#
+# This package is not in AUR and has no committed source tarball, so the OBS
+# tar_scm service packs the checkout into one. That tarball has a constant name
+# rather than a versioned one, so pkgver here is free to track debian/changelog
+# and a release does not require editing the OBS service as well.
+#
+# The repository-root PKGBUILD builds in-tree with "cd ${startdir}" from an
+# empty source array and cannot work on OBS.
+
+# Maintainer: Adrian <adrian@mxlinux.org>
+pkgname=mx25-artwork
+pkgver=26.05.02
+pkgrel=1
+pkgdesc="Default wallpaper backgrounds for MX25"
+arch=('any')
+url="https://mxlinux.org"
+license=('GPL3')
+depends=()
+makedepends=()
+source=("${pkgname}-source.tar")
+sha256sums=('SKIP')
+
+# tar_scm unpacks to <repository>-<versionformat>; both are fixed here.
+_srcdir="${pkgname}-source"
+PKGEXT='.pkg.tar.zst'
+
+package() {
+    cd "${srcdir}/${_srcdir}"
+
+    install -dm755 "${pkgdir}/usr/share/backgrounds"
+    install -dm755 "${pkgdir}/usr/share/wallpapers"
+
+    cp -a backgrounds/. "${pkgdir}/usr/share/backgrounds/"
+    cp -a wallpapers/. "${pkgdir}/usr/share/wallpapers/"
+
+    # Create default25.png as copy of Maturity.png
+    cp "${pkgdir}/usr/share/backgrounds/Maturity.png" "${pkgdir}/usr/share/backgrounds/default25.png"
+
+    # Create symlink in wallpapers directory
+    ln -s "/usr/share/backgrounds/default25.png" "${pkgdir}/usr/share/wallpapers/default25.png"
+}

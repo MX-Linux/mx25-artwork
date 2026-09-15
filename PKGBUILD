@@ -1,6 +1,6 @@
 # Maintainer: Adrian <adrian@mxlinux.org>
 pkgname=mx25-artwork
-pkgver=${PKGVER:-25.09.03}
+pkgver=${PKGVER:-26.05.02}
 pkgrel=1
 pkgdesc="Default wallpaper backgrounds for MX25"
 arch=('any')
